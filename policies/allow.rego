@@ -1,12 +1,16 @@
-package example.allow
+package authz
 
+# Default rule: Deny all requests
 default allow = false
 
+# Allow access if the user's role is "admin"
 allow {
     input.user.role == "admin"
 }
 
+# Allow "editor" users to edit "document" resources
 allow {
     input.user.role == "editor"
-    input.resource.starts_with("/editor")
+    input.resource.type == "document"
+    input.action == "edit"
 }
