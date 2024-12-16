@@ -11,12 +11,12 @@ allow {
 # Allow "editor" users to edit "document" resources
 allow {
     input.user.role == "editor"
-    input.resource.type == "document"
+    input.resource.type == "agents"
     input.action == "edit"
 }
 
 allow {
-    input.user.role == "viewer2"
-    input.resource.type == "document"
-    input.action == "view"
+    input.user.role == "reviewer"
+    input.resource.type == "agents"
+    input.action == "GET"
 }
