@@ -18,5 +18,5 @@ allow {
 allow {
     input.user.role == "reviewer"
     input.resource.type == "agents"
-    ["POST"][_] == input.action
+    ["POST", "GET"][_] == input.action
 }
