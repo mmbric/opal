@@ -17,6 +17,6 @@ allow {
 
 allow {
     input.user.role == "reviewer"
-    input.resource.type == "agents"
+    input.resource.type == "document"
     input.action == "GET"
 }
