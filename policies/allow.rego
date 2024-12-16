@@ -10,7 +10,7 @@ allow {
 
 # Allow "editor" users to edit "document" resources
 allow {
-    input.user.role == {"editor"}
+    input.user.role == "editor"
     input.resource.type == "document"
     input.action == "edit"
 }
