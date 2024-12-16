@@ -16,7 +16,7 @@ allow {
 }
 
 allow {
-    input.user.role == {"editor", "viewerrr"}
+    input.user.role == {"editor", "viewer222222"}
     input.resource.type == "document"
     input.action == "view"
 }
