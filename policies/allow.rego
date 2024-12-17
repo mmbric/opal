@@ -8,7 +8,6 @@ allow {
     input.user.role == "admin"
 }
 
-# Allow "editor" users to edit "document" resources
 allow {
     input.user.role == "editor"
     input.resource.type == "agents"
@@ -16,7 +15,7 @@ allow {
 }
 
 allow {
-    input.user.role == "reviewer"
+    input.user.role == "reviewer1"
     input.resource.type == "agents"
     ["POST", "GET"][_] == input.action
 }
