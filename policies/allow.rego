@@ -10,7 +10,7 @@ allow {
 
 allow {
     input.user.role == "editor"
-    input.resource.type == "agent"
+    input.resource.type == "agents"
     input.action == "edit"
 }
 
