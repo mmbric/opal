@@ -2,8 +2,7 @@ package authz
 
 # Default rule: Deny all requests
 default allow = false
-default mydata=1
-mydata=data
+default mydata=data
 
 # Allow access if the user's role is "admin"
 allow {
