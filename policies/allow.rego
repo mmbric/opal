@@ -5,6 +5,7 @@ default allow = false
 
 # Allow access if the user's role is "admin"
 allow {
+    trace("input: " + input)
     input.user.role == "admin"
 }
 
