@@ -15,5 +15,5 @@ allow {
 }
 
 allow {
-    input.resource.id == null
+    input.resource.id == ""
 }
