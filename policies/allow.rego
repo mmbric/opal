@@ -13,7 +13,7 @@ allow {
 }
 
 allow {
-    key := "auth_" + input.resource.type + "_" +  input.resource.id
-    role := data.static.policy_data[input.user.companyId][key]
+    k := "auth_" + input.resource.type + "_" +  input.resource.id
+    role := data.static.policy_data[input.user.companyId][k]
     data.role_permissions[role][_] == input.action
 }
