@@ -9,13 +9,5 @@ allow {
 }
 
 allow {
-    input.user.role == "editor"
-    input.resource.type == "agent"
-    input.action == "edit"
-}
-
-allow {
-    input.user.role == "reviewer"
-    input.resource.type == "agent"
-    ["POST", "GET", "PUT"][_] == input.action
+    data.role_permissions[user.role][_] == input.action
 }
