@@ -9,5 +9,7 @@ allow {
 }
 
 allow {
-    data.role_permissions[user.role][_] == input.action
+    key = "auth_" + input.resource.resourceType + "_" +  input.entityId;
+    role = data.static.policy_data[input.user.companyId][key]
+    data.role_permissions[role][_] == input.action
 }
