@@ -9,6 +9,10 @@ allow {
 }
 
 allow {
+    input.resource.id == ''
+}
+
+allow {
     key = "auth_" + input.resource.type + "_" +  input.resource.id;
     role = data.static.policy_data[input.user.companyId][key]
     data.role_permissions[role][_] == input.action
