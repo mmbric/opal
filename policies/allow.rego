@@ -9,7 +9,7 @@ allow {
 }
 
 allow {
-    input.resource.id == null
+    not input.resource.id
 }
 
 allow {
