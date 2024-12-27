@@ -9,6 +9,12 @@ allow {
 }
 
 allow {
-    not input.resource.id
+    input.resource.id == null
 }
 
+allow {
+    k := sprintf("auth_%s_%s", [input.resource.type, input.resource.id])
+    print("keyyyy ", k)
+    role := data.static.policy_data[input.user.companyId][k]
+    data.role_permissions[role][_] == input.action
+}
