@@ -13,7 +13,7 @@ allow {
 }
 
 allow {
-    key = "auth_" + input.resource.type + "_" +  input.resource.id;
+    key = "auth_" + input.resource.type + "_" +  input.resource.id
     print("authkey: ", key)
     role = data.static.policy_data[input.user.companyId][key]
     print("roleVal: ", role)
