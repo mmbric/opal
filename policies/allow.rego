@@ -19,7 +19,7 @@ allow {
 }
 
 is_allowed(companyId, resourceType, resourceId) {
-    k := sprintf("auth_%s_%s", [itemType, resourceId])
+    k := sprintf("auth_%s_%s", [resourceType, resourceId])
     role := data.static.policy_data[companyId][k].role
     data.role_permissions[role][_] == input.action
     print("is_allowed TRUEEEEEE",)
