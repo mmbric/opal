@@ -16,4 +16,5 @@ allow {
     k := sprintf("auth_%s_%s", [input.resource.type, input.resource.id])
     role := data.static.policy_data[input.user.companyId][k].role
     data.role_permissions[role][_] == input.action
+    print("aaaa",data.role_permissions[role],"---",input.action)
 }
