@@ -14,6 +14,7 @@ allow {
 
 allow {
     is_allowed(input.user.companyId, input.resource.type, input.resource.id)
+    print("allow---------allow")
 }
 
 is_allowed(companyId, resourceType, resourceId) {
